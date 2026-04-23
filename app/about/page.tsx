@@ -19,7 +19,7 @@ export default function AboutPage() {
         <div className="container relative">
           <div className="max-w-[820px]">
             <Reveal>
-              <div className="eyebrow text-accent mb-6">Studio · Est. {STUDIO.established}</div>
+              <div className="eyebrow text-accent mb-6">Studio · Est. 2025</div>
               <h1 className="h-display text-white mb-5">
                 A studio for <span className="text-accent">professional services.</span>
               </h1>
@@ -46,6 +46,9 @@ export default function AboutPage() {
                 <p className="text-[15px] text-ink-2 leading-relaxed">
                   We work closely with each client from first call through to launch and beyond, keeping you informed at every stage with no surprises and no handoffs to juniors.
                 </p>
+                <p className="text-[15px] text-ink-2 leading-relaxed">
+                  We have a team of dedicated specialists across design, development, and paid media — meaning every part of your project is handled by someone who does that one thing exceptionally well.
+                </p>
               </div>
             </Reveal>
             <Reveal delay={0.1}>
@@ -71,10 +74,6 @@ export default function AboutPage() {
                   <div className="flex justify-between">
                     <span className="text-ink-3">Base</span>
                     <span className="text-ink">{STUDIO.location}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-ink-3">Availability</span>
-                    <span className="text-accent">{STUDIO.availability}</span>
                   </div>
                 </div>
               </div>
@@ -123,18 +122,13 @@ export default function AboutPage() {
               <p className="text-[16px] text-ink-2 mb-7 max-w-[500px] leading-relaxed">
                 We're selectively onboarding founding clients across professional services and beyond. If you're building or rebuilding your digital presence, we'd love to have a conversation.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
-                <Magnetic>
-                  <Button asChild size="lg">
-                    <Link href="/contact">
-                      Book a discovery call <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
-                  </Button>
-                </Magnetic>
-                <Button asChild size="lg" variant="ghost">
-                  <Link href="/work">See the work</Link>
+              <Magnetic>
+                <Button asChild size="lg">
+                  <Link href="/contact">
+                    Book a discovery call <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
                 </Button>
-              </div>
+              </Magnetic>
             </Reveal>
           </div>
         </div>
