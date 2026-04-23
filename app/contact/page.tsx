@@ -35,6 +35,7 @@ export default function ContactPage() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSubmitting(true);
+    // Simulate submission — in production this would POST to Formspree/etc.
     await new Promise((r) => setTimeout(r, 600));
     setSubmitted(true);
     setSubmitting(false);
@@ -65,6 +66,7 @@ export default function ContactPage() {
       <section className="py-10 md:py-16 border-t border-white/8">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-8 lg:gap-12">
+            {/* ==== FORM ==== */}
             <Reveal>
               <div className="bg-bg-2 border border-white/8 rounded-lg p-6 md:p-10">
                 {submitted ? (
@@ -105,20 +107,23 @@ export default function ContactPage() {
                         <Input id="company" name="company" placeholder="Harlow & Associates" />
                       </div>
                     </div>
-                    <div className="flex flex-col gap-2">
-                      <Label>What are you looking for?</Label>
-                      <Select name="interest">
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select one..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {INTEREST.map((opt) => (
-                            <SelectItem key={opt} value={opt}>
-                              {opt}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="flex flex-col gap-2">
+                        <Label>What are you looking for?</Label>
+                        <Select name="interest">
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select one..." />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {INTEREST.map((opt) => (
+                              <SelectItem key={opt} value={opt}>
+                                {opt}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
+
                     </div>
                     <div className="flex flex-col gap-2">
                       <Label htmlFor="project">Tell us about your project</Label>
@@ -138,7 +143,7 @@ export default function ContactPage() {
                       </Magnetic>
                       <span className="font-mono text-[10.5px] tracking-[0.18em] uppercase text-ink-3 flex items-center gap-2">
                         <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-                        Response within 1 business day
+                        Response under 2h in business hours
                       </span>
                     </div>
                   </form>
@@ -146,12 +151,14 @@ export default function ContactPage() {
               </div>
             </Reveal>
 
+            {/* ==== SIDE PANEL ==== */}
             <Reveal delay={0.1}>
               <div className="flex flex-col gap-6">
                 <div className="bg-bg-2 border border-white/8 rounded-lg p-6 md:p-7 flex flex-col gap-5">
                   <div className="eyebrow text-ink-3">Direct channels</div>
                   <div className="flex flex-col gap-4">
-                    
+
+                    <a
                       href={`tel:${STUDIO.phone}`}
                       className="flex items-start gap-3 hover:text-ink transition-colors group"
                     >
