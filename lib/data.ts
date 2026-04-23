@@ -6,8 +6,8 @@ export const STUDIO = {
   email: "admin@teampvamedia.com",
   phone: "+1 (361) 851-6951",
   location: "London, UK",
-  established: 2024,
-  availability: "Accepting projects · Q3 2026",
+  established: 2025,
+  availability: "",
 };
 
 export const STATS = [
@@ -74,18 +74,6 @@ export const SERVICES = [
   },
   {
     num: "04",
-    name: "Conversion Optimisation",
-    price: "From $1,500",
-    summary: "Strategic layouts, compelling CTAs, and persuasive copy structure — turns more visitors into paying clients.",
-    points: [
-      "UX audit of existing site",
-      "Copy rewrite for key pages",
-      "CTA and flow restructure",
-      "Before/after conversion reporting",
-    ],
-  },
-  {
-    num: "05",
     name: "Brand & Visual Identity",
     price: "From $1,800",
     summary: "Craft or refine your visual identity — logo, colour palette, typography. Everything works in harmony.",
@@ -97,34 +85,10 @@ export const SERVICES = [
     ],
   },
   {
-    num: "06",
-    name: "Email Marketing",
-    price: "From $950/mo",
-    summary: "Campaigns, automated flows, and copy that keeps your firm front of mind — for prospects and existing clients.",
-    points: [
-      "Welcome & nurture sequences",
-      "Monthly newsletter production",
-      "Segmentation & list hygiene",
-      "Performance reporting",
-    ],
-  },
-  {
-    num: "07",
-    name: "Ongoing Support",
-    price: "Included · extended from $300/mo",
-    summary: "Complimentary hosting and 2 hrs/mo maintenance with every website. Extended packages available.",
-    points: [
-      "Managed hosting & security",
-      "Monthly maintenance hours",
-      "Priority response SLA",
-      "Extended hours on request",
-    ],
-  },
-  {
-    num: "08",
+    num: "05",
     name: "Website Redesign",
     price: "From $1,500",
-    summary: "Your current site isn\'t doing you justice. Strip it back and rebuild something that works — faster, sharper, built to convert.",
+    summary: "Your current site isn't doing you justice. Strip it back and rebuild something that works — faster, sharper, built to convert.",
     points: [
       "Heritage audit of existing site",
       "Full redesign on new platform",
@@ -151,143 +115,9 @@ export type Tier = {
 export const TIERS: Tier[] = [
   {
     name: "Web",
-    pitch: "A site that lands better clients, and nothing you don\'t need.",
+    pitch: "A site that lands better clients, and nothing you don't need.",
     setup: "$2,000",
     setupNote: "one-off",
     monthly: null,
     monthlyNote: null,
     cta: "Start a website",
-    featured: false,
-    includes: [
-      "Custom design, unlimited pages",
-      "Mobile responsive & SEO-ready",
-      "Unlimited revisions until satisfied",
-      "Free brand strategy session",
-      "Contact forms & integrations",
-      "Managed hosting — complimentary",
-      "2 hrs/mo maintenance — complimentary",
-    ],
-  },
-  {
-    name: "Web + Growth",
-    pitch: "The full stack. Website plus a paid program that brings the client pipeline.",
-    setup: "$1,700",
-    setupNote: "one-off · 15% off",
-    monthly: "$2,500",
-    monthlyNote: "per month",
-    cta: "Start both",
-    featured: true,
-    tag: "Most popular",
-    includes: [
-      "Everything in Web",
-      "Paid ad management — Meta & Google",
-      "Ad creative & copywriting",
-      "Monthly performance report",
-      "Free digital presence audit",
-      "Dedicated point of contact",
-    ],
-  },
-  {
-    name: "Growth",
-    pitch: "Keep your current site — we run the marketing program on top of it.",
-    setup: null,
-    setupNote: null,
-    monthly: "$2,500",
-    monthlyNote: "per month · all-in",
-    cta: "Start growth",
-    featured: false,
-    includes: [
-      "Paid ad management — Meta & Google",
-      "Ad creative & copywriting",
-      "Monthly performance report",
-      "Free digital presence audit",
-      "30-day strategy onboarding",
-      "Dedicated point of contact",
-      "Website audit on signup",
-    ],
-    discounts: [
-      { term: "Month to month", price: "$2,500/mo", note: "Full flexibility" },
-      { term: "3 months upfront", price: "$6,375", note: "Save $1,125 · 15% off" },
-      { term: "6 months upfront", price: "$12,000", note: "Save $3,000 · 20% off" },
-    ],
-  },
-];
-
-export const PROCESS = [
-  {
-    num: "01",
-    name: "Discovery call",
-    desc: "A straight conversation about your business, goals, and what success looks like. No pressure, no pitch.",
-    duration: "30 min",
-  },
-  {
-    num: "02",
-    name: "Strategy & planning",
-    desc: "We map structure, user journey, visual direction and goals. You sign off before a single line of code is written.",
-    duration: "1–2 days",
-  },
-  {
-    num: "03",
-    name: "Design & development",
-    desc: "Built with care and precision. You see progress and give feedback at every stage — no black boxes, no hand-offs to juniors.",
-    duration: "3–5 days",
-  },
-  {
-    num: "04",
-    name: "Review & refinement",
-    desc: "We revise, polish, and perfect together — as many rounds as it takes until everything is exactly right.",
-    duration: "1–2 days",
-  },
-  {
-    num: "05",
-    name: "Launch & beyond",
-    desc: "We handle the full launch and stay on hand after. You\'re not on your own once we hand over.",
-    duration: "Ongoing",
-  },
-];
-
-export const GUARANTEES = [
-  {
-    num: "01",
-    tag: "Zero risk",
-    name: "Website guarantee",
-    desc: "You don\'t pay a single penny until your website is live and you\'re 100% satisfied. Unlimited revisions — no time limit, no pressure.",
-  },
-  {
-    num: "02",
-    tag: "No strings",
-    name: "Free digital audit",
-    desc: "Every marketing client gets a full audit of their current digital presence before we start. No charge, no strings — just an honest picture of where you stand.",
-  },
-  {
-    num: "03",
-    tag: "Yours to keep",
-    name: "Marketing onboarding",
-    desc: "Month one is dedicated entirely to strategy, account setup and creative build. Everything produced is yours to keep — regardless of what happens next.",
-  },
-];
-
-export const VALUES = [
-  {
-    name: "Direct communication",
-    desc: "You always know exactly where things stand. We respond fast, explain clearly, and never leave you guessing.",
-  },
-  {
-    name: "No templates, ever",
-    desc: "Every project is designed from scratch for your brand. No shortcuts — just purposeful, considered work built to last.",
-  },
-  {
-    name: "Built to convert",
-    desc: "Beautiful isn\'t enough. Every decision is tied to how it affects your ability to attract and convert the right clients.",
-  },
-  {
-    name: "Reliable & dependable",
-    desc: "We hit deadlines, stick to scope, and stand behind our work. When you work with us, you can count on us to deliver.",
-  },
-];
-
-export const NAV = [
-  { href: "/services", label: "Services" },
-  { href: "/process", label: "Process" },
-  { href: "/about", label: "Studio" },
-];
