@@ -27,16 +27,14 @@ export function Ticker() {
       <div className="container flex items-center justify-between gap-4 py-2.5">
         <div className="flex items-center gap-5">
           <span className="flex items-center gap-2">
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent animate-pulse shadow-[0_0_10px_hsl(17_80%_54%_/_0.55)]" />
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             <span>London · <span className="text-ink">{time || "—"}</span></span>
           </span>
           <span className="hidden sm:inline text-ink-4">·</span>
-          <span className="hidden sm:inline">Est. {STUDIO.established} · Practice N° 024</span>
-          <span className="hidden lg:inline text-ink-4">·</span>
-          <span className="hidden lg:inline">{STUDIO.availability}</span>
+          <span className="hidden sm:inline">Est. {STUDIO.established}</span>
         </div>
         <div className="hidden md:block">
-          <span>V / 2026.04</span>
+          <span>PVA Media Ltd</span>
         </div>
       </div>
     </div>
