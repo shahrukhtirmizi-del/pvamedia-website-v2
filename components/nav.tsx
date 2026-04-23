@@ -46,9 +46,6 @@ export function Nav() {
             ))}
           </div>
           <div className="flex items-center gap-2">
-            <span className="hidden md:inline-flex items-center gap-1 px-2 py-1 rounded border border-white/15 text-[11px] font-mono text-ink-2">
-              ⌘K
-            </span>
             <Button asChild size="sm" className="hidden sm:inline-flex">
               <Link href="/contact">
                 Book a call <ArrowUpRight className="w-3.5 h-3.5" />
