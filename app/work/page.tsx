@@ -5,7 +5,7 @@ import { SectionHead } from "@/components/section-head";
 import { CaseCard } from "@/components/case-card";
 import { Reveal } from "@/components/reveal";
 import { Magnetic } from "@/components/magnetic";
-import { CASES, LOGOS, STUDIO } from "@/lib/data";
+import { CASES, LOGOS } from "@/lib/data";
 
 export const metadata = {
   title: "Work · PVA Media",
@@ -69,29 +69,6 @@ export default function WorkPage() {
           </div>
         </section>
       )}
-
-      <section className="py-20 md:py-28 border-t border-white/8 relative overflow-hidden">
-        <div className="absolute inset-0 atmosphere pointer-events-none" />
-        <div className="container relative">
-          <div className="max-w-[720px]">
-            <Reveal>
-              <h2 className="h-section text-white mb-5">
-                Want a case study on <span className="text-accent">your</span> situation?
-              </h2>
-              <p className="text-[16px] text-ink-2 mb-7 max-w-[500px] leading-relaxed">
-                Most of our engagements begin as discovery calls where we diagnose specifically what's in the way of your pipeline. That conversation is free, and usually diagnoses more than it sells.
-              </p>
-              <Magnetic>
-                <Button asChild size="lg">
-                  <Link href="/contact">
-                    Book a discovery call <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </Button>
-              </Magnetic>
-            </Reveal>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
