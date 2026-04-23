@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ArrowRight, Mail, Phone, MapPin, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Phone, MapPin, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -28,8 +28,6 @@ const INTEREST = [
   "Not sure yet — let's talk",
 ];
 
-const BUDGET = ["£2k – £5k", "£5k – £10k", "£10k – £25k", "£25k – £50k", "£50k+"];
-
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -37,7 +35,6 @@ export default function ContactPage() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSubmitting(true);
-    // Simulate submission — in production this would POST to Formspree/etc.
     await new Promise((r) => setTimeout(r, 600));
     setSubmitted(true);
     setSubmitting(false);
@@ -52,7 +49,7 @@ export default function ContactPage() {
             <Reveal>
               <div className="eyebrow text-accent mb-6 flex items-center gap-2">
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-                Currently accepting · Q3 2026
+                Get in touch · Response within 1 business day
               </div>
               <h1 className="h-display text-white mb-5">
                 Tell us about <span className="text-accent">the work.</span>
@@ -68,7 +65,6 @@ export default function ContactPage() {
       <section className="py-10 md:py-16 border-t border-white/8">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-8 lg:gap-12">
-            {/* ==== FORM ==== */}
             <Reveal>
               <div className="bg-bg-2 border border-white/8 rounded-lg p-6 md:p-10">
                 {submitted ? (
@@ -80,11 +76,7 @@ export default function ContactPage() {
                       Message received.
                     </h3>
                     <p className="text-[15px] text-ink-2 leading-relaxed max-w-[460px]">
-                      Thanks — we'll be back in touch within one business day. Meanwhile, if your project has a tight deadline, you can email us directly at{" "}
-                      <a className="text-accent underline-offset-4 hover:underline" href={`mailto:${STUDIO.email}`}>
-                        {STUDIO.email}
-                      </a>
-                      .
+                      Thanks — we'll be back in touch within one business day.
                     </p>
                     <Button asChild variant="ghost" size="md" className="mt-2">
                       <Link href="/">Back to home <ArrowRight className="w-3.5 h-3.5" /></Link>
@@ -113,37 +105,20 @@ export default function ContactPage() {
                         <Input id="company" name="company" placeholder="Harlow & Associates" />
                       </div>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div className="flex flex-col gap-2">
-                        <Label>What are you looking for?</Label>
-                        <Select name="interest">
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select one..." />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {INTEREST.map((opt) => (
-                              <SelectItem key={opt} value={opt}>
-                                {opt}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        <Label>Budget band</Label>
-                        <Select name="budget">
-                          <SelectTrigger>
-                            <SelectValue placeholder="Ballpark..." />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {BUDGET.map((opt) => (
-                              <SelectItem key={opt} value={opt}>
-                                {opt}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </div>
+                    <div className="flex flex-col gap-2">
+                      <Label>What are you looking for?</Label>
+                      <Select name="interest">
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select one..." />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {INTEREST.map((opt) => (
+                            <SelectItem key={opt} value={opt}>
+                              {opt}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                     </div>
                     <div className="flex flex-col gap-2">
                       <Label htmlFor="project">Tell us about your project</Label>
@@ -163,7 +138,7 @@ export default function ContactPage() {
                       </Magnetic>
                       <span className="font-mono text-[10.5px] tracking-[0.18em] uppercase text-ink-3 flex items-center gap-2">
                         <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-                        Response under 2h in business hours
+                        Response within 1 business day
                       </span>
                     </div>
                   </form>
@@ -171,27 +146,12 @@ export default function ContactPage() {
               </div>
             </Reveal>
 
-            {/* ==== SIDE PANEL ==== */}
             <Reveal delay={0.1}>
               <div className="flex flex-col gap-6">
                 <div className="bg-bg-2 border border-white/8 rounded-lg p-6 md:p-7 flex flex-col gap-5">
                   <div className="eyebrow text-ink-3">Direct channels</div>
                   <div className="flex flex-col gap-4">
-                    <a
-                      href={`mailto:${STUDIO.email}`}
-                      className="flex items-start gap-3 hover:text-ink transition-colors group"
-                    >
-                      <Mail className="w-4 h-4 text-accent mt-1 shrink-0" />
-                      <div className="flex flex-col gap-0.5">
-                        <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-ink-3">
-                          Email
-                        </span>
-                        <span className="text-[14px] text-ink group-hover:text-accent transition-colors">
-                          {STUDIO.email}
-                        </span>
-                      </div>
-                    </a>
-                    <a
+                    
                       href={`tel:${STUDIO.phone}`}
                       className="flex items-start gap-3 hover:text-ink transition-colors group"
                     >
