@@ -6,12 +6,12 @@ import { PricingCard } from "@/components/pricing-card";
 import { ServiceCard } from "@/components/service-card";
 import { Reveal } from "@/components/reveal";
 import { Magnetic } from "@/components/magnetic";
-import { SERVICES, TIERS, STUDIO } from "@/lib/data";
+import { SERVICES, TIERS } from "@/lib/data";
 
 export const metadata = {
   title: "Services & Pricing · PVA Media",
   description:
-    "Websites, paid marketing, landing pages and brand identity — from £800 one-off to £2,500/mo, all-in packages with no surprise invoices.",
+    "Websites, paid marketing, landing pages and brand identity — from $800 one-off to $2,500/mo, all-in packages with no surprise invoices.",
 };
 
 export default function ServicesPage() {
@@ -58,7 +58,7 @@ export default function ServicesPage() {
             eyebrow="Individual services"
             title={
               <>
-                Build a custom engagement from <span className="text-accent">eight disciplines.</span>
+                Build a custom engagement from <span className="text-accent">five disciplines.</span>
               </>
             }
             sub="Not every project fits a package. Pick the services that match your moment — we'll scope a bespoke engagement."
@@ -123,18 +123,13 @@ export default function ServicesPage() {
               <p className="text-[16px] text-ink-2 mb-7 max-w-[480px] leading-relaxed">
                 30 minutes on a call and we'll tell you honestly which engagement shape makes sense — or whether PVA Media is even the right fit.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
-                <Magnetic>
-                  <Button asChild size="lg">
-                    <Link href="/contact">
-                      Book a discovery call <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
-                  </Button>
-                </Magnetic>
-                <Button asChild size="lg" variant="ghost">
-                  <a href={`mailto:${STUDIO.email}`}>{STUDIO.email}</a>
+              <Magnetic>
+                <Button asChild size="lg">
+                  <Link href="/contact">
+                    Book a discovery call <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
                 </Button>
-              </div>
+              </Magnetic>
             </Reveal>
           </div>
         </div>
