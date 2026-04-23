@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowUpRight, Phone, MapPin } from "lucide-react";
 import { STUDIO } from "@/lib/data";
 import { Brand } from "@/components/brand";
 
@@ -9,7 +9,6 @@ const COLS = [
     links: [
       { href: "/about", label: "About" },
       { href: "/process", label: "How we work" },
-      { href: "/work", label: "Work" },
       { href: "/contact", label: "Contact" },
     ],
   },
@@ -20,7 +19,7 @@ const COLS = [
       { href: "/services", label: "Paid marketing" },
       { href: "/services", label: "Landing pages" },
       { href: "/services", label: "Brand identity" },
-      { href: "/services", label: "Ongoing support" },
+      { href: "/services", label: "Website redesign" },
     ],
   },
   {
@@ -45,9 +44,6 @@ export function Footer() {
               We build websites and run marketing campaigns that help professional services businesses grow — clean, strategic, and built with care, every time.
             </p>
             <div className="flex flex-col gap-2.5 text-[13px] text-ink-2 mt-2">
-              <a href={`mailto:${STUDIO.email}`} className="flex items-center gap-2 hover:text-ink transition-colors">
-                <Mail className="w-3.5 h-3.5 text-accent" /> {STUDIO.email}
-              </a>
               <a href={`tel:${STUDIO.phone}`} className="flex items-center gap-2 hover:text-ink transition-colors">
                 <Phone className="w-3.5 h-3.5 text-accent" /> {STUDIO.phone}
               </a>
@@ -80,13 +76,7 @@ export function Footer() {
 
         <div className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 font-mono text-[10.5px] tracking-[0.18em] uppercase text-ink-3">
           <div className="flex items-center gap-4 flex-wrap">
-            <span>© 2026 PVA Media Ltd.</span>
-            <span className="hidden md:inline text-ink-4">·</span>
-            <span>Crafting digital presence, one project at a time.</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            <span>{STUDIO.availability}</span>
+            <span>© 2025 PVA Media Ltd. All rights reserved.</span>
           </div>
         </div>
       </div>
