@@ -11,7 +11,7 @@ export const STUDIO = {
 };
 
 export const STATS = [
-  { k: "Avg. delivery", v: "5–7 days" },
+  { k: "Avg. delivery", v: "6–8 days" },
   { k: "Monthly maintenance", v: "2 hrs incl." },
   { k: "Revisions", v: "Unlimited" },
   { k: "Payment", v: "On approval" },
