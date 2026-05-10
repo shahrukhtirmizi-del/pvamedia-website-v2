@@ -20,7 +20,6 @@ import { STUDIO } from "@/lib/data";
 
 const INTEREST = [
   "New website design",
-  "Website redesign",
   "Paid marketing (Meta & Google Ads)",
   "Web + Growth (website & marketing)",
   "Landing page",
