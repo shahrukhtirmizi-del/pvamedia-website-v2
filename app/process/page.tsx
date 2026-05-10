@@ -8,7 +8,7 @@ import { PROCESS } from "@/lib/data";
 
 export const metadata = {
   title: "Process · PVA Media",
-  description: "Five tight phases from discovery to launch. You sign off at every gate. Most websites ship in 6–8 days.",
+  description: "Five tight phases from discovery to launch. You sign off at every gate. Most websites ship in 5–7 days.",
 };
 
 export default function ProcessPage() {
@@ -79,11 +79,11 @@ export default function ProcessPage() {
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-l border-white/8 tabular">
             {[
-              { k: "Website design", v: "6–8 days", note: "From kickoff to launch" },
+              { k: "Website design", v: "5–7 days", note: "From kickoff to launch" },
               { k: "Website mockup", v: "1–2 days", note: "Initial concept for your approval" },
-              { k: "Website redesign", v: "4–6 days", note: "Full rebuild, faster turnaround" },
               { k: "Landing page", v: "2–3 days", note: "Single campaign page, live fast" },
               { k: "Campaign activation", v: "2–4 weeks", note: "Strategy, setup & first results" },
+              { k: "Brand identity", v: "5–7 days", note: "Logo, palette, typography, guidelines" },
               { k: "Discovery → contract", v: "48 hours", note: "Scope, proposal, agreement" },
             ].map((t) => (
               <div
