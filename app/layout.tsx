@@ -8,8 +8,13 @@ import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
   title: "PVA Media — Websites & campaigns, done properly.",
   description:
-    "A London studio building conversion-focused websites and paid marketing for professional services teams — law firms, estate agencies and consultancies.",
+    "A London studio building conversion-focused websites and paid marketing for businesses who want the craft, not the template.",
   metadataBase: new URL("https://pvamedia.co.uk"),
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
