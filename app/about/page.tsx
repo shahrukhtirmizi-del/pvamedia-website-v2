@@ -8,7 +8,7 @@ import { VALUES, STATS, STUDIO } from "@/lib/data";
 
 export const metadata = {
   title: "Studio · PVA Media",
-  description: "A London studio for professional services — law firms, estate agencies and consultancies.",
+  description: "A London studio building conversion-focused websites and paid marketing for businesses who want the craft, not the template.",
 };
 
 export default function AboutPage() {
@@ -21,10 +21,10 @@ export default function AboutPage() {
             <Reveal>
               <div className="eyebrow text-accent mb-6">Studio · Est. 2025</div>
               <h1 className="h-display text-white mb-5">
-                A studio for <span className="text-accent">professional services.</span>
+                A studio built for <span className="text-accent">measurable outcomes.</span>
               </h1>
               <p className="text-[16px] md:text-[17px] leading-relaxed text-ink-2 max-w-[620px]">
-                We work primarily with law firms, estate agencies and consultancies — though we welcome any business that values quality and measurable outcomes. No account managers, no hand-offs to juniors, no retainer surprises.
+                We work with ambitious businesses who value quality and measurable outcomes. No account managers, no hand-offs to juniors, no retainer surprises.
               </p>
             </Reveal>
           </div>
@@ -38,7 +38,7 @@ export default function AboutPage() {
               <div className="flex flex-col gap-5">
                 <div className="eyebrow text-ink-3">The shape of the work</div>
                 <p className="text-[17px] text-ink leading-relaxed">
-                  At PVA Media, we combine sharp design thinking with a clear understanding of how professional service businesses attract and convert the right clients online.
+                  At PVA Media, we combine sharp design thinking with a clear understanding of how businesses attract and convert the right clients online.
                 </p>
                 <p className="text-[15px] text-ink-2 leading-relaxed">
                   Every website we build and every campaign we run is crafted to reflect your expertise and generate real enquiries — not to win awards, not to dazzle, not to hide the substance behind ornament.
@@ -120,7 +120,7 @@ export default function AboutPage() {
                 If you're <span className="text-accent">serious about the work</span>, so are we.
               </h2>
               <p className="text-[16px] text-ink-2 mb-7 max-w-[500px] leading-relaxed">
-                We're selectively onboarding founding clients across professional services and beyond. If you're building or rebuilding your digital presence, we'd love to have a conversation.
+                We're selectively onboarding founding clients across every sector. If you're building or rebuilding your digital presence, we'd love to have a conversation.
               </p>
               <Magnetic>
                 <Button asChild size="lg">
