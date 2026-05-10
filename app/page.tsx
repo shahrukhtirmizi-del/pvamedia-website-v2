@@ -127,7 +127,7 @@ export default function Home() {
                 From first call to <span className="text-accent">live.</span>
               </>
             }
-            sub="Five tight phases. You sign off at every gate. Most websites ship in 6–8 days."
+            sub="Five tight phases. You sign off at every gate. Most websites ship in 5–7 days."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-0 border-t border-white/8">
             {PROCESS.map((p, i) => (
