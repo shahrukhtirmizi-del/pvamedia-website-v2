@@ -2,7 +2,7 @@ export const STUDIO = {
   name: "PVA Media",
   tagline: "Websites. Campaigns. Done properly.",
   description:
-    "A London studio building conversion-focused websites and paid marketing for professional services teams — law firms, estate agencies and consultancies who want the craft, not the template.",
+    "A London studio building conversion-focused websites and paid marketing for businesses who want the craft, not the template.",
   email: "admin@teampvamedia.com",
   phone: "+1 (361) 851-6951",
   location: "London, UK",
@@ -11,7 +11,7 @@ export const STUDIO = {
 };
 
 export const STATS = [
-  { k: "Avg. delivery", v: "6–8 days" },
+  { k: "Avg. delivery", v: "5–7 days" },
   { k: "Monthly maintenance", v: "2 hrs incl." },
   { k: "Revisions", v: "Unlimited" },
   { k: "Payment", v: "On approval" },
@@ -35,7 +35,7 @@ export const SERVICES = [
   {
     num: "01",
     name: "Website Design",
-    price: "From $2,000",
+    price: "From $1,500",
     summary: "Custom websites built from scratch — no templates. Designed to reflect your expertise and convert visitors into enquiries.",
     points: [
       "Custom design, as many pages as needed",
@@ -63,7 +63,7 @@ export const SERVICES = [
   {
     num: "03",
     name: "Landing Pages",
-    price: "From $800",
+    price: "From $700",
     summary: "High-converting pages for campaigns, launches, and lead generation. Built to guide visitors toward one clear action.",
     points: [
       "Single-purpose conversion page",
@@ -75,25 +75,13 @@ export const SERVICES = [
   {
     num: "04",
     name: "Brand & Visual Identity",
-    price: "From $1,800",
+    price: "From $1,500",
     summary: "Craft or refine your visual identity — logo, colour palette, typography. Everything works in harmony.",
     points: [
       "Logo design & refinement",
       "Colour system & typography",
       "Brand usage guidelines",
       "Asset library & templates",
-    ],
-  },
-  {
-    num: "05",
-    name: "Website Redesign",
-    price: "From $1,500",
-    summary: "Your current site isn't doing you justice. Strip it back and rebuild something that works — faster, sharper, built to convert.",
-    points: [
-      "Heritage audit of existing site",
-      "Full redesign on new platform",
-      "Content migration included",
-      "Zero downtime deployment",
     ],
   },
 ];
@@ -116,7 +104,7 @@ export const TIERS: Tier[] = [
   {
     name: "Web",
     pitch: "A site that lands better clients, and nothing you don't need.",
-    setup: "$2,000",
+    setup: "$1,500",
     setupNote: "one-off",
     monthly: null,
     monthlyNote: null,
@@ -135,8 +123,8 @@ export const TIERS: Tier[] = [
   {
     name: "Web + Growth",
     pitch: "The full stack. Website plus a paid program that brings the client pipeline.",
-    setup: "$1,700",
-    setupNote: "one-off · 15% off",
+    setup: "$1,300",
+    setupNote: "one-off · 13% off",
     monthly: "$2,500",
     monthlyNote: "per month",
     cta: "Start both",
@@ -188,7 +176,7 @@ export const PROCESS = [
     num: "02",
     name: "Strategy & planning",
     desc: "We map structure, user journey, visual direction and goals. You sign off before a single line of code is written.",
-    duration: "1–2 days",
+    duration: "1 day",
   },
   {
     num: "03",
@@ -200,7 +188,7 @@ export const PROCESS = [
     num: "04",
     name: "Review & refinement",
     desc: "We revise, polish, and perfect together — as many rounds as it takes until everything is exactly right.",
-    duration: "1–2 days",
+    duration: "1 day",
   },
   {
     num: "05",
