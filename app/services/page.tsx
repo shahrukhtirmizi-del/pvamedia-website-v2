@@ -11,7 +11,7 @@ import { SERVICES, TIERS } from "@/lib/data";
 export const metadata = {
   title: "Services & Pricing · PVA Media",
   description:
-    "Websites, paid marketing, landing pages and brand identity — from $800 one-off to $2,500/mo, all-in packages with no surprise invoices.",
+    "Websites, paid marketing, landing pages and brand identity — from $700 one-off to $2,500/mo, all-in packages with no surprise invoices.",
 };
 
 export default function ServicesPage() {
@@ -58,7 +58,7 @@ export default function ServicesPage() {
             eyebrow="Individual services"
             title={
               <>
-                Build a custom engagement from <span className="text-accent">five disciplines.</span>
+                Build a custom engagement from <span className="text-accent">four disciplines.</span>
               </>
             }
             sub="Not every project fits a package. Pick the services that match your moment — we'll scope a bespoke engagement."
