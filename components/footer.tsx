@@ -19,7 +19,6 @@ const COLS = [
       { href: "/services", label: "Paid marketing" },
       { href: "/services", label: "Landing pages" },
       { href: "/services", label: "Brand identity" },
-      { href: "/services", label: "Website redesign" },
     ],
   },
   {
@@ -41,7 +40,7 @@ export function Footer() {
           <div className="flex flex-col gap-5">
             <Brand />
             <p className="text-[14px] leading-relaxed text-ink-2 max-w-sm">
-              We build websites and run marketing campaigns that help professional services businesses grow — clean, strategic, and built with care, every time.
+              We build websites and run marketing campaigns that help businesses grow — clean, strategic, and built with care, every time.
             </p>
             <div className="flex flex-col gap-2.5 text-[13px] text-ink-2 mt-2">
               <a href={`tel:${STUDIO.phone}`} className="flex items-center gap-2 hover:text-ink transition-colors">
