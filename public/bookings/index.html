@@ -1115,11 +1115,10 @@
 
   function nextStep(num) {
     const prev = num - 1;
-    // Validate selection for option steps
-    if (prev < 7 && prev > 0) {
+    // Only validate multiple choice steps (not the final contact step)
+    if (prev < TOTAL_STEPS && prev > 0) {
       const key = `step${prev}`;
       if (!answers[key]) {
-        // Shake the panel subtly
         const panel = document.getElementById(`step-${prev}`);
         panel.style.animation = 'none';
         panel.offsetHeight;
