@@ -1166,6 +1166,7 @@
             <p style="color:var(--ink-2);font-size:14.5px;line-height:1.65;margin-bottom:24px;">
               Choose a slot that works for you. It's free, 20 minutes, and no-pressure — we'll tell you honestly whether we can help.
             </p>
+            <script>fbq('track', 'Lead');</script>
             <div style="background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:16px;">
               <iframe
                 src="https://api.leadconnectorhq.com/widget/booking/cZBscwIpTLBtRnAwFFx6"
@@ -1273,20 +1274,10 @@
     answers.phone = phone;
     answers.email = email;
 
-    // Meta Pixel lead event — fires when available
-    if (typeof fbq !== 'undefined') {
-      fbq('track', 'Lead');
-    }
-
     // Show confirmation screen
     document.getElementById('step-7').classList.remove('active');
     document.getElementById('form-complete').classList.add('active');
     document.getElementById('progress').style.width = '100%';
-
-    // Fire Meta Pixel Lead event — tracks form submission as a conversion
-    if (typeof fbq !== 'undefined') {
-      fbq('track', 'Lead');
-    }
 
     // Scroll confirmation into view
     document.getElementById('form-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
