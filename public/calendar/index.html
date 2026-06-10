@@ -1274,6 +1274,23 @@
     answers.phone = phone;
     answers.email = email;
 
+    // Send to Formspree — emails shahrukh.tirmizi@pvamedia.co.uk
+    fetch('https://formspree.io/f/mzdqvkaq', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name: answers.firstName,
+        phone: answers.phone,
+        email: answers.email,
+        state: answers.step1 || '',
+        business_type: answers.step2 || '',
+        website_status: answers.step3 || '',
+        jobs_per_month: answers.step4 || '',
+        biggest_challenge: answers.step5 || '',
+        investment: answers.step6 || ''
+      })
+    }).catch(err => console.error('Formspree error:', err));
+
     // Show confirmation screen
     document.getElementById('step-7').classList.remove('active');
     document.getElementById('form-complete').classList.add('active');
