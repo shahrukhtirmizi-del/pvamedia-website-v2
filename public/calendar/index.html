@@ -23,6 +23,7 @@
   /></noscript>
   <!-- End Meta Pixel Code -->
 
+  <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap" rel="stylesheet" />
@@ -1166,7 +1167,6 @@
             <p style="color:var(--ink-2);font-size:14.5px;line-height:1.65;margin-bottom:24px;">
               Choose a slot that works for you. It's free, 20 minutes, and no-pressure — we'll tell you honestly whether we can help.
             </p>
-            <script>fbq('track', 'Lead');</script>
             <div style="background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:16px;">
               <iframe
                 src="https://api.leadconnectorhq.com/widget/booking/cZBscwIpTLBtRnAwFFx6"
@@ -1290,6 +1290,11 @@
         investment: answers.step6 || ''
       })
     }).catch(err => console.error('Formspree error:', err));
+
+    // Fire Meta Pixel Lead event on form submission
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Lead');
+    }
 
     // Show confirmation screen
     document.getElementById('step-7').classList.remove('active');
