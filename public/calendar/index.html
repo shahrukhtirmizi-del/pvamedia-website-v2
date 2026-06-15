@@ -720,49 +720,205 @@
 
 <!-- ===== HERO ===== -->
 <section id="hero" class="section-border">
-  <div class="absolute inset-0 atmosphere pointer-events-none" style="position:absolute;inset:0;pointer-events:none;"></div>
-  <div class="absolute inset-0 bg-grid bg-grid-mask" style="position:absolute;inset:0;pointer-events:none;" aria-hidden="true"></div>
+  <div style="position:absolute;inset:0;pointer-events:none;" class="atmosphere"></div>
+  <div style="position:absolute;inset:0;pointer-events:none;" class="bg-grid bg-grid-mask" aria-hidden="true"></div>
   <div class="container" style="position:relative;z-index:1;">
-    <div class="hero-inner">
-      <p class="eyebrow reveal" style="color:var(--accent);margin-bottom:20px;display:flex;align-items:center;gap:8px;">
-        <span style="display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s ease-in-out infinite;"></span>
-        For landscapers across the US
-      </p>
-      <h1 class="h-display reveal reveal-d1">
-        We take landscapers from<br class="hide-mobile">
-        3 booked jobs a month to<br class="hide-mobile">
-        <span class="accent">12, without lifting a finger.</span>
-      </h1>
-      <p class="sub reveal reveal-d2">
-        You do the landscaping. We get you the jobs.
-      </p>
-      <div class="hero-cta reveal reveal-d3">
-        <a href="#form-section" class="btn btn-primary btn-lg">
-          See if this is for you
-          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+
+    <!-- Two column hero layout -->
+    <div style="display:grid;grid-template-columns:1fr;gap:48px;align-items:start;padding:72px 0 80px;" id="hero-grid">
+
+      <!-- Left — headline -->
+      <div class="hero-left">
+        <p class="eyebrow reveal" style="color:var(--accent);margin-bottom:20px;display:flex;align-items:center;gap:8px;">
+          <span style="display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s ease-in-out infinite;"></span>
+          For landscapers across the US
+        </p>
+        <h1 class="h-display reveal reveal-d1" style="font-size:clamp(30px,4.5vw,58px);margin-bottom:20px;">
+          We take landscapers from 3 booked jobs a month to
+          <span class="accent"> 12, without lifting a finger.</span>
+        </h1>
+        <p class="sub reveal reveal-d2" style="margin-bottom:32px;">
+          You do the landscaping. We get you the jobs.
+        </p>
+        <div class="trust-strip reveal reveal-d3" style="padding-top:28px;">
+          <div class="trust-item">
+            <div class="label">Websites built</div>
+            <div class="val">200+</div>
+          </div>
+          <div class="trust-item">
+            <div class="label">Live in</div>
+            <div class="val">5 days</div>
+          </div>
+          <div class="trust-item">
+            <div class="label">Guarantee</div>
+            <div class="val">60-day</div>
+          </div>
+          <div class="trust-item">
+            <div class="label">Money back</div>
+            <div class="val">If it fails</div>
+          </div>
+        </div>
       </div>
-      <div class="trust-strip reveal reveal-d4">
-        <div class="trust-item">
-          <div class="label">Websites built</div>
-          <div class="val">200+</div>
+
+      <!-- Right — form -->
+      <div class="hero-right reveal reveal-d2">
+        <div class="form-card">
+          <div class="form-header">
+            <h2 class="h-card">See if this is for you</h2>
+            <p>Free call · No obligation · 20 minutes max</p>
+          </div>
+          <div class="form-body">
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" id="progress" style="width:14%;"></div>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="step-panel active" id="step-1">
+              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 1 of 7</span></div>
+              <div class="step-q">Where are you based?</div>
+              <div class="step-hint">We currently serve landscapers across the US.</div>
+              <div class="options-grid cols2">
+                <button class="option-btn" data-step="1" data-val="Texas" onclick="selectOption(this)"><span class="option-check"></span> Texas</button>
+                <button class="option-btn" data-step="1" data-val="California" onclick="selectOption(this)"><span class="option-check"></span> California</button>
+                <button class="option-btn" data-step="1" data-val="Florida" onclick="selectOption(this)"><span class="option-check"></span> Florida</button>
+                <button class="option-btn" data-step="1" data-val="Other US state" onclick="selectOption(this)"><span class="option-check"></span> Other US state</button>
+              </div>
+              <div class="form-nav"><span></span><button class="btn btn-primary" onclick="nextStep(2)">Continue →</button></div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-panel" id="step-2">
+              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 2 of 7</span></div>
+              <div class="step-q">What type of landscaping do you do?</div>
+              <div class="step-hint">Pick the one that best describes your business.</div>
+              <div class="options-grid">
+                <button class="option-btn" data-step="2" data-val="Residential (lawns, gardens, maintenance)" onclick="selectOption(this)"><span class="option-check"></span> Residential — lawns, gardens, maintenance</button>
+                <button class="option-btn" data-step="2" data-val="Commercial (offices, estates, facilities)" onclick="selectOption(this)"><span class="option-check"></span> Commercial — offices, estates, facilities</button>
+                <button class="option-btn" data-step="2" data-val="Design & installation" onclick="selectOption(this)"><span class="option-check"></span> Design &amp; installation</button>
+                <button class="option-btn" data-step="2" data-val="Both residential and commercial" onclick="selectOption(this)"><span class="option-check"></span> Both residential and commercial</button>
+              </div>
+              <div class="form-nav"><button class="btn btn-ghost" onclick="prevStep(1)">← Back</button><button class="btn btn-primary" onclick="nextStep(3)">Continue →</button></div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-panel" id="step-3">
+              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 3 of 7</span></div>
+              <div class="step-q">Do you currently have a website?</div>
+              <div class="step-hint">Be honest — there's no wrong answer here.</div>
+              <div class="options-grid">
+                <button class="option-btn" data-step="3" data-val="Yes, and it gets me leads" onclick="selectOption(this)"><span class="option-check"></span> Yes, and it gets me leads</button>
+                <button class="option-btn" data-step="3" data-val="Yes, but it's not working / outdated" onclick="selectOption(this)"><span class="option-check"></span> Yes, but it's not working / outdated</button>
+                <button class="option-btn" data-step="3" data-val="No, I don't have one" onclick="selectOption(this)"><span class="option-check"></span> No, I don't have one</button>
+              </div>
+              <div class="form-nav"><button class="btn btn-ghost" onclick="prevStep(2)">← Back</button><button class="btn btn-primary" onclick="nextStep(4)">Continue →</button></div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-panel" id="step-4">
+              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 4 of 7</span></div>
+              <div class="step-q">How many jobs are you booking per month right now?</div>
+              <div class="step-hint">We use this to understand where you are and what results are realistic for you.</div>
+              <div class="options-grid cols2">
+                <button class="option-btn" data-step="4" data-val="Less than 5" onclick="selectOption(this)"><span class="option-check"></span> Less than 5</button>
+                <button class="option-btn" data-step="4" data-val="5–10 jobs" onclick="selectOption(this)"><span class="option-check"></span> 5–10 jobs</button>
+                <button class="option-btn" data-step="4" data-val="10–20 jobs" onclick="selectOption(this)"><span class="option-check"></span> 10–20 jobs</button>
+                <button class="option-btn" data-step="4" data-val="20+ jobs" onclick="selectOption(this)"><span class="option-check"></span> 20+ jobs</button>
+              </div>
+              <div class="form-nav"><button class="btn btn-ghost" onclick="prevStep(3)">← Back</button><button class="btn btn-primary" onclick="nextStep(5)">Continue →</button></div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-panel" id="step-5">
+              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 5 of 7</span></div>
+              <div class="step-q">What's your biggest challenge right now when it comes to getting more work?</div>
+              <div class="step-hint">Pick the one that resonates most.</div>
+              <div class="options-grid">
+                <button class="option-btn" data-step="5" data-val="Not enough people finding me online" onclick="selectOption(this)"><span class="option-check"></span> Not enough people finding me online</button>
+                <button class="option-btn" data-step="5" data-val="Getting enquiries but not converting them" onclick="selectOption(this)"><span class="option-check"></span> Getting enquiries but not converting them</button>
+                <button class="option-btn" data-step="5" data-val="Too reliant on word of mouth and referrals" onclick="selectOption(this)"><span class="option-check"></span> Too reliant on word of mouth and referrals</button>
+                <button class="option-btn" data-step="5" data-val="I don't have a consistent way to get new clients" onclick="selectOption(this)"><span class="option-check"></span> No consistent way to get new clients</button>
+              </div>
+              <div class="form-nav"><button class="btn btn-ghost" onclick="prevStep(4)">← Back</button><button class="btn btn-primary" onclick="nextStep(6)">Continue →</button></div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-panel" id="step-6">
+              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 6 of 7</span></div>
+              <div class="step-q">What are you currently willing and able to invest in growing your business?</div>
+              <div class="step-hint">This helps us recommend the right solution. All figures are monthly.</div>
+              <div class="options-grid">
+                <button class="option-btn" data-step="6" data-val="Under $500/mo" onclick="selectOption(this)"><span class="option-check"></span> Under $500/mo</button>
+                <button class="option-btn" data-step="6" data-val="$500–$1,000/mo" onclick="selectOption(this)"><span class="option-check"></span> $500–$1,000/mo</button>
+                <button class="option-btn" data-step="6" data-val="$1,000–$2,500/mo" onclick="selectOption(this)"><span class="option-check"></span> $1,000–$2,500/mo</button>
+                <button class="option-btn" data-step="6" data-val="$2,500+/mo" onclick="selectOption(this)"><span class="option-check"></span> $2,500+/mo — I want serious growth</button>
+              </div>
+              <div class="form-nav"><button class="btn btn-ghost" onclick="prevStep(5)">← Back</button><button class="btn btn-primary" onclick="nextStep(7)">Continue →</button></div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="step-panel" id="step-7">
+              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 7 of 7</span></div>
+              <div class="step-q">Last step — where should we send your call details?</div>
+              <div class="step-hint">We'll reach out within 2 hours to confirm your slot.</div>
+              <div class="input-group">
+                <label class="input-label" for="fname">First name</label>
+                <input class="input-field" id="fname" type="text" placeholder="Marco" autocomplete="given-name" />
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="phone">Phone number</label>
+                <input class="input-field" id="phone" type="tel" placeholder="+1 (555) 000-0000" autocomplete="tel" />
+              </div>
+              <div class="input-group" style="margin-bottom:28px;">
+                <label class="input-label" for="email">Email address</label>
+                <input class="input-field" id="email" type="email" placeholder="you@example.com" autocomplete="email" />
+              </div>
+              <div class="form-nav">
+                <button class="btn btn-ghost" onclick="prevStep(6)">← Back</button>
+                <button class="btn btn-primary btn-lg" onclick="submitForm()" style="gap:10px;">
+                  Book my free call
+                  <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Complete -->
+            <div class="form-complete" id="form-complete">
+              <div class="complete-icon">✓</div>
+              <h3 class="h-card" style="margin-bottom:8px;">You're in — pick a time below.</h3>
+              <p style="color:var(--ink-2);font-size:14.5px;line-height:1.65;margin-bottom:24px;">
+                Choose a slot that works for you. It's free, 20 minutes, and no-pressure.
+              </p>
+              <div style="background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:16px;">
+                <iframe
+                  src="https://api.leadconnectorhq.com/widget/booking/cZBscwIpTLBtRnAwFFx6"
+                  style="width:100%;border:none;overflow:hidden;min-height:700px;"
+                  scrolling="no">
+                </iframe>
+              </div>
+              <div style="font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);">
+                PVA Media · pvamedia.co.uk
+              </div>
+            </div>
+
+          </div>
         </div>
-        <div class="trust-item">
-          <div class="label">Live in</div>
-          <div class="val">5 days</div>
-        </div>
-        <div class="trust-item">
-          <div class="label">Guarantee</div>
-          <div class="val">60-day</div>
-        </div>
-        <div class="trust-item">
-          <div class="label">Money back</div>
-          <div class="val">If it fails</div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:16px;">
+          <span style="font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:6px;"><span style="color:var(--accent);">✓</span> No credit card required</span>
+          <span style="font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:6px;"><span style="color:var(--accent);">✓</span> 60-day money back</span>
+          <span style="font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:6px;"><span style="color:var(--accent);">✓</span> Respond in under 2h</span>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
+<style>
+@media (min-width: 1024px) {
+  #hero-grid { grid-template-columns: 1fr 1fr !important; }
+}
+</style>
 
 <!-- ===== SECTION 1 — PAIN ===== -->
 <section id="pain" class="section-border section-bg2">
@@ -948,255 +1104,6 @@
   </div>
 </section>
 
-<!-- ===== SECTION 5 — FORM ===== -->
-<section id="form-section" class="atmosphere-center">
-  <div class="container">
-    <div class="section-head" style="text-align:center;max-width:600px;margin:0 auto 3.5rem;">
-      <div class="num-eyebrow" style="justify-content:center;">
-        <span class="num">05</span>
-        <span class="ey">Book your free call</span>
-      </div>
-      <h2 class="h-section">Takes 90 seconds.<br><span class="accent">Could change everything.</span></h2>
-      <p style="margin:0 auto;">Answer a few quick questions so we can see if we're a good fit. No pitch, no pressure — just an honest conversation.</p>
-    </div>
-
-    <div class="form-wrap">
-      <div class="form-card">
-        <div class="form-header">
-          <h2 class="h-card">Let's find out if this is right for you</h2>
-          <p>Free call · No obligation · 20 minutes max</p>
-        </div>
-        <div class="form-body">
-
-          <!-- Progress -->
-          <div class="progress-bar-wrap">
-            <div class="progress-bar-fill" id="progress" style="width:14%;"></div>
-          </div>
-
-          <!-- Step 1: State -->
-          <div class="step-panel active" id="step-1">
-            <div class="step-label">
-              <span class="eyebrow" style="color:var(--ink-3);">Step 1 of 7</span>
-            </div>
-            <div class="step-q">Where are you based?</div>
-            <div class="step-hint">We currently serve landscapers across the US.</div>
-            <div class="options-grid cols2">
-              <button class="option-btn" data-step="1" data-val="Texas" onclick="selectOption(this)">
-                <span class="option-check"></span> Texas
-              </button>
-              <button class="option-btn" data-step="1" data-val="California" onclick="selectOption(this)">
-                <span class="option-check"></span> California
-              </button>
-              <button class="option-btn" data-step="1" data-val="Florida" onclick="selectOption(this)">
-                <span class="option-check"></span> Florida
-              </button>
-              <button class="option-btn" data-step="1" data-val="Other US state" onclick="selectOption(this)">
-                <span class="option-check"></span> Other US state
-              </button>
-            </div>
-            <div class="form-nav">
-              <span></span>
-              <button class="btn btn-primary" onclick="nextStep(2)">Continue →</button>
-            </div>
-          </div>
-
-          <!-- Step 2: Business type -->
-          <div class="step-panel" id="step-2">
-            <div class="step-label">
-              <span class="eyebrow" style="color:var(--ink-3);">Step 2 of 7</span>
-            </div>
-            <div class="step-q">What type of landscaping do you do?</div>
-            <div class="step-hint">Pick the one that best describes your business.</div>
-            <div class="options-grid">
-              <button class="option-btn" data-step="2" data-val="Residential (lawns, gardens, maintenance)" onclick="selectOption(this)">
-                <span class="option-check"></span> Residential — lawns, gardens, maintenance
-              </button>
-              <button class="option-btn" data-step="2" data-val="Commercial (offices, estates, facilities)" onclick="selectOption(this)">
-                <span class="option-check"></span> Commercial — offices, estates, facilities
-              </button>
-              <button class="option-btn" data-step="2" data-val="Design & installation" onclick="selectOption(this)">
-                <span class="option-check"></span> Design &amp; installation
-              </button>
-              <button class="option-btn" data-step="2" data-val="Both residential and commercial" onclick="selectOption(this)">
-                <span class="option-check"></span> Both residential and commercial
-              </button>
-            </div>
-            <div class="form-nav">
-              <button class="btn btn-ghost" onclick="prevStep(1)">← Back</button>
-              <button class="btn btn-primary" onclick="nextStep(3)">Continue →</button>
-            </div>
-          </div>
-
-          <!-- Step 3: Website -->
-          <div class="step-panel" id="step-3">
-            <div class="step-label">
-              <span class="eyebrow" style="color:var(--ink-3);">Step 3 of 7</span>
-            </div>
-            <div class="step-q">Do you currently have a website?</div>
-            <div class="step-hint">Be honest — there's no wrong answer here.</div>
-            <div class="options-grid">
-              <button class="option-btn" data-step="3" data-val="Yes, and it gets me leads" onclick="selectOption(this)">
-                <span class="option-check"></span> Yes, and it gets me leads
-              </button>
-              <button class="option-btn" data-step="3" data-val="Yes, but it's not working / outdated" onclick="selectOption(this)">
-                <span class="option-check"></span> Yes, but it's not working / outdated
-              </button>
-              <button class="option-btn" data-step="3" data-val="No, I don't have one" onclick="selectOption(this)">
-                <span class="option-check"></span> No, I don't have one
-              </button>
-            </div>
-            <div class="form-nav">
-              <button class="btn btn-ghost" onclick="prevStep(2)">← Back</button>
-              <button class="btn btn-primary" onclick="nextStep(4)">Continue →</button>
-            </div>
-          </div>
-
-          <!-- Step 4: Jobs per month -->
-          <div class="step-panel" id="step-4">
-            <div class="step-label">
-              <span class="eyebrow" style="color:var(--ink-3);">Step 4 of 7</span>
-            </div>
-            <div class="step-q">How many jobs are you booking per month right now?</div>
-            <div class="step-hint">We use this to understand where you are and what results are realistic for you.</div>
-            <div class="options-grid cols2">
-              <button class="option-btn" data-step="4" data-val="Less than 5" onclick="selectOption(this)">
-                <span class="option-check"></span> Less than 5
-              </button>
-              <button class="option-btn" data-step="4" data-val="5–10 jobs" onclick="selectOption(this)">
-                <span class="option-check"></span> 5–10 jobs
-              </button>
-              <button class="option-btn" data-step="4" data-val="10–20 jobs" onclick="selectOption(this)">
-                <span class="option-check"></span> 10–20 jobs
-              </button>
-              <button class="option-btn" data-step="4" data-val="20+ jobs" onclick="selectOption(this)">
-                <span class="option-check"></span> 20+ jobs
-              </button>
-            </div>
-            <div class="form-nav">
-              <button class="btn btn-ghost" onclick="prevStep(3)">← Back</button>
-              <button class="btn btn-primary" onclick="nextStep(5)">Continue →</button>
-            </div>
-          </div>
-
-          <!-- Step 5: Biggest challenge -->
-          <div class="step-panel" id="step-5">
-            <div class="step-label">
-              <span class="eyebrow" style="color:var(--ink-3);">Step 5 of 7</span>
-            </div>
-            <div class="step-q">What's your biggest challenge right now when it comes to getting more work?</div>
-            <div class="step-hint">Pick the one that resonates most.</div>
-            <div class="options-grid">
-              <button class="option-btn" data-step="5" data-val="Not enough people finding me online" onclick="selectOption(this)">
-                <span class="option-check"></span> Not enough people finding me online
-              </button>
-              <button class="option-btn" data-step="5" data-val="Getting enquiries but not converting them" onclick="selectOption(this)">
-                <span class="option-check"></span> Getting enquiries but not converting them
-              </button>
-              <button class="option-btn" data-step="5" data-val="Too reliant on word of mouth and referrals" onclick="selectOption(this)">
-                <span class="option-check"></span> Too reliant on word of mouth and referrals
-              </button>
-              <button class="option-btn" data-step="5" data-val="I don't have a consistent way to get new clients" onclick="selectOption(this)">
-                <span class="option-check"></span> No consistent way to get new clients
-              </button>
-            </div>
-            <div class="form-nav">
-              <button class="btn btn-ghost" onclick="prevStep(4)">← Back</button>
-              <button class="btn btn-primary" onclick="nextStep(6)">Continue →</button>
-            </div>
-          </div>
-
-          <!-- Step 6: Investment -->
-          <div class="step-panel" id="step-6">
-            <div class="step-label">
-              <span class="eyebrow" style="color:var(--ink-3);">Step 6 of 7</span>
-            </div>
-            <div class="step-q">What are you currently willing and able to invest in growing your business?</div>
-            <div class="step-hint">This helps us recommend the right solution. All figures are monthly.</div>
-            <div class="options-grid">
-              <button class="option-btn" data-step="6" data-val="Under $500/mo" onclick="selectOption(this)">
-                <span class="option-check"></span> Under $500/mo
-              </button>
-              <button class="option-btn" data-step="6" data-val="$500–$1,000/mo" onclick="selectOption(this)">
-                <span class="option-check"></span> $500–$1,000/mo
-              </button>
-              <button class="option-btn" data-step="6" data-val="$1,000–$2,500/mo" onclick="selectOption(this)">
-                <span class="option-check"></span> $1,000–$2,500/mo
-              </button>
-              <button class="option-btn" data-step="6" data-val="$2,500+/mo" onclick="selectOption(this)">
-                <span class="option-check"></span> $2,500+/mo — I want serious growth
-              </button>
-            </div>
-            <div class="form-nav">
-              <button class="btn btn-ghost" onclick="prevStep(5)">← Back</button>
-              <button class="btn btn-primary" onclick="nextStep(7)">Continue →</button>
-            </div>
-          </div>
-
-          <!-- Step 7: Contact -->
-          <div class="step-panel" id="step-7">
-            <div class="step-label">
-              <span class="eyebrow" style="color:var(--ink-3);">Step 7 of 7</span>
-            </div>
-            <div class="step-q">Last step — where should we send your call details?</div>
-            <div class="step-hint">We'll reach out within 2 hours to confirm your slot.</div>
-            <div class="input-group">
-              <label class="input-label" for="fname">First name</label>
-              <input class="input-field" id="fname" type="text" placeholder="Marco" autocomplete="given-name" />
-            </div>
-            <div class="input-group">
-              <label class="input-label" for="phone">Phone number</label>
-              <input class="input-field" id="phone" type="tel" placeholder="+1 (555) 000-0000" autocomplete="tel" />
-            </div>
-            <div class="input-group" style="margin-bottom:28px;">
-              <label class="input-label" for="email">Email address</label>
-              <input class="input-field" id="email" type="email" placeholder="you@example.com" autocomplete="email" />
-            </div>
-            <div class="form-nav">
-              <button class="btn btn-ghost" onclick="prevStep(6)">← Back</button>
-              <button class="btn btn-primary btn-lg" onclick="submitForm()" style="gap:10px;">
-                Book my free call
-                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-            </div>
-          </div>
-
-          <!-- Complete -->
-          <div class="form-complete" id="form-complete">
-            <div class="complete-icon">✓</div>
-            <h3 class="h-card" style="margin-bottom:8px;">You're in — pick a time below.</h3>
-            <p style="color:var(--ink-2);font-size:14.5px;line-height:1.65;margin-bottom:24px;">
-              Choose a slot that works for you. It's free, 20 minutes, and no-pressure — we'll tell you honestly whether we can help.
-            </p>
-            <div style="background:var(--bg-3);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:16px;">
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/booking/cZBscwIpTLBtRnAwFFx6"
-                style="width:100%;border:none;overflow:hidden;min-height:700px;"
-                scrolling="no">
-              </iframe>
-            </div>
-            <div style="font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);">
-              PVA Media · pvamedia.co.uk
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Below form trust signals -->
-      <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:24px;">
-        <span style="font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:6px;">
-          <span style="color:var(--accent);">✓</span> No credit card required
-        </span>
-        <span style="font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:6px;">
-          <span style="color:var(--accent);">✓</span> 60-day money back
-        </span>
-        <span style="font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:6px;">
-          <span style="color:var(--accent);">✓</span> Typically respond in under 2h
-        </span>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ===== FOOTER ===== -->
 <footer>
