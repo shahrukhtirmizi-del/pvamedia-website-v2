@@ -769,14 +769,14 @@
           </div>
           <div class="form-body">
             <div class="progress-bar-wrap">
-              <div class="progress-bar-fill" id="progress" style="width:14%;"></div>
+              <div class="progress-bar-fill" id="progress" style="width:33%;"></div>
             </div>
 
-            <!-- Step 1 -->
+            <!-- Step 1 — Location -->
             <div class="step-panel active" id="step-1">
-              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 1 of 7</span></div>
+              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 1 of 3</span></div>
               <div class="step-q">Where are you based?</div>
-              <div class="step-hint">We currently serve landscapers across the US.</div>
+              <div class="step-hint">We work with landscapers across the US.</div>
               <div class="options-grid cols2">
                 <button class="option-btn" data-step="1" data-val="Texas" onclick="selectOption(this)"><span class="option-check"></span> Texas</button>
                 <button class="option-btn" data-step="1" data-val="California" onclick="selectOption(this)"><span class="option-check"></span> California</button>
@@ -786,80 +786,25 @@
               <div class="form-nav"><span></span><button class="btn btn-primary" onclick="nextStep(2)">Continue →</button></div>
             </div>
 
-            <!-- Step 2 -->
+            <!-- Step 2 — Service type -->
             <div class="step-panel" id="step-2">
-              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 2 of 7</span></div>
+              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 2 of 3</span></div>
               <div class="step-q">What type of landscaping do you do?</div>
-              <div class="step-hint">Pick the one that best describes your business.</div>
+              <div class="step-hint">Pick whichever fits best.</div>
               <div class="options-grid">
-                <button class="option-btn" data-step="2" data-val="Residential (lawns, gardens, maintenance)" onclick="selectOption(this)"><span class="option-check"></span> Residential — lawns, gardens, maintenance</button>
-                <button class="option-btn" data-step="2" data-val="Commercial (offices, estates, facilities)" onclick="selectOption(this)"><span class="option-check"></span> Commercial — offices, estates, facilities</button>
+                <button class="option-btn" data-step="2" data-val="Residential" onclick="selectOption(this)"><span class="option-check"></span> Residential — lawns, gardens, maintenance</button>
+                <button class="option-btn" data-step="2" data-val="Commercial" onclick="selectOption(this)"><span class="option-check"></span> Commercial — offices, estates, facilities</button>
                 <button class="option-btn" data-step="2" data-val="Design & installation" onclick="selectOption(this)"><span class="option-check"></span> Design &amp; installation</button>
                 <button class="option-btn" data-step="2" data-val="Both residential and commercial" onclick="selectOption(this)"><span class="option-check"></span> Both residential and commercial</button>
               </div>
               <div class="form-nav"><button class="btn btn-ghost" onclick="prevStep(1)">← Back</button><button class="btn btn-primary" onclick="nextStep(3)">Continue →</button></div>
             </div>
 
-            <!-- Step 3 -->
+            <!-- Step 3 — Contact -->
             <div class="step-panel" id="step-3">
-              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 3 of 7</span></div>
-              <div class="step-q">Do you currently have a website?</div>
-              <div class="step-hint">Be honest — there's no wrong answer here.</div>
-              <div class="options-grid">
-                <button class="option-btn" data-step="3" data-val="Yes, and it gets me leads" onclick="selectOption(this)"><span class="option-check"></span> Yes, and it gets me leads</button>
-                <button class="option-btn" data-step="3" data-val="Yes, but it's not working / outdated" onclick="selectOption(this)"><span class="option-check"></span> Yes, but it's not working / outdated</button>
-                <button class="option-btn" data-step="3" data-val="No, I don't have one" onclick="selectOption(this)"><span class="option-check"></span> No, I don't have one</button>
-              </div>
-              <div class="form-nav"><button class="btn btn-ghost" onclick="prevStep(2)">← Back</button><button class="btn btn-primary" onclick="nextStep(4)">Continue →</button></div>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="step-panel" id="step-4">
-              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 4 of 7</span></div>
-              <div class="step-q">How many jobs are you booking per month right now?</div>
-              <div class="step-hint">We use this to understand where you are and what results are realistic for you.</div>
-              <div class="options-grid cols2">
-                <button class="option-btn" data-step="4" data-val="Less than 5" onclick="selectOption(this)"><span class="option-check"></span> Less than 5</button>
-                <button class="option-btn" data-step="4" data-val="5–10 jobs" onclick="selectOption(this)"><span class="option-check"></span> 5–10 jobs</button>
-                <button class="option-btn" data-step="4" data-val="10–20 jobs" onclick="selectOption(this)"><span class="option-check"></span> 10–20 jobs</button>
-                <button class="option-btn" data-step="4" data-val="20+ jobs" onclick="selectOption(this)"><span class="option-check"></span> 20+ jobs</button>
-              </div>
-              <div class="form-nav"><button class="btn btn-ghost" onclick="prevStep(3)">← Back</button><button class="btn btn-primary" onclick="nextStep(5)">Continue →</button></div>
-            </div>
-
-            <!-- Step 5 -->
-            <div class="step-panel" id="step-5">
-              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 5 of 7</span></div>
-              <div class="step-q">What's your biggest challenge right now when it comes to getting more work?</div>
-              <div class="step-hint">Pick the one that resonates most.</div>
-              <div class="options-grid">
-                <button class="option-btn" data-step="5" data-val="Not enough people finding me online" onclick="selectOption(this)"><span class="option-check"></span> Not enough people finding me online</button>
-                <button class="option-btn" data-step="5" data-val="Getting enquiries but not converting them" onclick="selectOption(this)"><span class="option-check"></span> Getting enquiries but not converting them</button>
-                <button class="option-btn" data-step="5" data-val="Too reliant on word of mouth and referrals" onclick="selectOption(this)"><span class="option-check"></span> Too reliant on word of mouth and referrals</button>
-                <button class="option-btn" data-step="5" data-val="I don't have a consistent way to get new clients" onclick="selectOption(this)"><span class="option-check"></span> No consistent way to get new clients</button>
-              </div>
-              <div class="form-nav"><button class="btn btn-ghost" onclick="prevStep(4)">← Back</button><button class="btn btn-primary" onclick="nextStep(6)">Continue →</button></div>
-            </div>
-
-            <!-- Step 6 -->
-            <div class="step-panel" id="step-6">
-              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 6 of 7</span></div>
-              <div class="step-q">What are you currently willing and able to invest in growing your business?</div>
-              <div class="step-hint">This helps us recommend the right solution. All figures are monthly.</div>
-              <div class="options-grid">
-                <button class="option-btn" data-step="6" data-val="Under $500/mo" onclick="selectOption(this)"><span class="option-check"></span> Under $500/mo</button>
-                <button class="option-btn" data-step="6" data-val="$500–$1,000/mo" onclick="selectOption(this)"><span class="option-check"></span> $500–$1,000/mo</button>
-                <button class="option-btn" data-step="6" data-val="$1,000–$2,500/mo" onclick="selectOption(this)"><span class="option-check"></span> $1,000–$2,500/mo</button>
-                <button class="option-btn" data-step="6" data-val="$2,500+/mo" onclick="selectOption(this)"><span class="option-check"></span> $2,500+/mo — I want serious growth</button>
-              </div>
-              <div class="form-nav"><button class="btn btn-ghost" onclick="prevStep(5)">← Back</button><button class="btn btn-primary" onclick="nextStep(7)">Continue →</button></div>
-            </div>
-
-            <!-- Step 7 -->
-            <div class="step-panel" id="step-7">
-              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 7 of 7</span></div>
+              <div class="step-label"><span class="eyebrow" style="color:var(--ink-3);">Step 3 of 3</span></div>
               <div class="step-q">Last step — where should we send your call details?</div>
-              <div class="step-hint">We'll reach out within 2 hours to confirm your slot.</div>
+              <div class="step-hint">We'll be in touch within 2 hours to confirm your slot.</div>
               <div class="input-group">
                 <label class="input-label" for="fname">First name</label>
                 <input class="input-field" id="fname" type="text" placeholder="Marco" autocomplete="given-name" />
@@ -873,7 +818,7 @@
                 <input class="input-field" id="email" type="email" placeholder="you@example.com" autocomplete="email" />
               </div>
               <div class="form-nav">
-                <button class="btn btn-ghost" onclick="prevStep(6)">← Back</button>
+                <button class="btn btn-ghost" onclick="prevStep(2)">← Back</button>
                 <button class="btn btn-primary btn-lg" onclick="submitForm()" style="gap:10px;">
                   Book my free call
                   <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1127,7 +1072,7 @@
 
   // Form state
   const answers = {};
-  const TOTAL_STEPS = 7;
+  const TOTAL_STEPS = 3;
 
   function updateProgress(step) {
     const pct = Math.round((step / TOTAL_STEPS) * 100);
@@ -1158,7 +1103,7 @@
     document.getElementById(`step-${num}`).classList.add('active');
     updateProgress(num);
     // Scroll form into view
-    document.getElementById('form-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.getElementById('hero').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   function prevStep(num) {
@@ -1166,7 +1111,7 @@
     document.getElementById(`step-${next}`).classList.remove('active');
     document.getElementById(`step-${num}`).classList.add('active');
     updateProgress(num);
-    document.getElementById('form-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.getElementById('hero').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   function submitForm() {
@@ -1189,12 +1134,8 @@
         name: answers.firstName,
         phone: answers.phone,
         email: answers.email,
-        state: answers.step1 || '',
-        business_type: answers.step2 || '',
-        website_status: answers.step3 || '',
-        jobs_per_month: answers.step4 || '',
-        biggest_challenge: answers.step5 || '',
-        investment: answers.step6 || ''
+        location: answers.step1 || '',
+        service_type: answers.step2 || ''
       })
     }).catch(err => console.error('Formspree error:', err));
 
@@ -1204,12 +1145,12 @@
     }
 
     // Show confirmation screen
-    document.getElementById('step-7').classList.remove('active');
+    document.getElementById('step-3').classList.remove('active');
     document.getElementById('form-complete').classList.add('active');
     document.getElementById('progress').style.width = '100%';
 
     // Scroll confirmation into view
-    document.getElementById('form-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.getElementById('hero').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   // Scroll reveal on sections
